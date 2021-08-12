@@ -1,0 +1,14 @@
+test_case=int(input())                          #read number of test cases
+for i in range(test_case):                      # for eac element in range from 0 to number of test cases
+    m_1=list(map(int,input().split(' ')))       # reading matrix 1 in the form of list
+    m_2=list(map(int,input().split(' ')))       # reading matrix 2 in the form of list
+    m_3=list(map(int,input().split(' ')))       # reading matrix 3 in the form of list
+    lst=[m_1,m_2,m_3]                           # all matrices in one list 
+    lst=sorted(lst)                             # sorting final list
+    if (lst[1][0]>=lst[0][0] and lst[1][1]>=lst[0][1] and lst[1][2]>=lst[0][2]) and (lst[1][0]>lst[0][0] or lst[1][1]>lst[0][1] or lst[1][2]>lst[0][2]):
+        if (lst[2][0]>=lst[1][0] and lst[2][1]>=lst[1][1] and lst[2][2]>=lst[1][2]) and (lst[2][0]>lst[1][0] or lst[2][1]>lst[1][1] or lst[2][2]>lst[1][2]):
+            print('yes')                        #if satisfies print yes
+        else:
+            print('no')                         # not statisfies then print no
+    else:
+        print('no')                             # not statisfies then print no
